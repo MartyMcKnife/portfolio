@@ -1,11 +1,14 @@
 import Hero from "../components/Hero";
+import React, { ReactElement, useState } from "react";
 
-const index = () => {
+export default function Index(): ReactElement {
+  const [content, setContent] = useState(false);
   return (
-    <div className="bg-neutral-800 min-h-screen px-16 justify-center md:justify-start md:px-24 flex items-center">
-      <Hero />
+    <div className="bg-neutral-800 px-16 md:px-24 ">
+      <Hero content={content} setContent={setContent} />
+      {content && (
+        <div className="text-white text-center">Overflowed content</div>
+      )}
     </div>
   );
-};
-
-export default index;
+}
