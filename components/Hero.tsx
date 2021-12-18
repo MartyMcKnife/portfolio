@@ -28,7 +28,7 @@ export default function Hero({ content, setContent }: Props): ReactElement {
 
   return (
     <div
-      className={`h-screen w-full font-bold text-6xl md:text-8xl text-white flex flex-col ${
+      className={`h-screen w-full font-bold text-6xl md:text-8xl text-white flex flex-col px-16 md:px-24  ${
         content ? "" : "overflow-y-hidden"
       }`}
     >

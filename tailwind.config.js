@@ -6,8 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        default: ["'Nunito'", "sans-serif"],
-        emoji: ["Segoe UI Emoji"],
+        default: ['"Nunito"', "sans-serif"],
       },
     },
   },
