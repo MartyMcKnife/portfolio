@@ -11,7 +11,7 @@ export default function Rating({ rating }: Props): ReactElement {
   const halfStars = rating % 1;
   const emptyStars = 5 - fullStars - (halfStars ? 1 : 0);
   return (
-    <div className="flex flex-row flex-wrap text-yellow-500">
+    <div className="flex flex-row flex-wrap text-yellow-500 ">
       {Array.from(Array(fullStars)).map((_, i) => (
         <ImStarFull key={i} />
       ))}

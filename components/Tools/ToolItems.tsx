@@ -33,7 +33,7 @@ export default function ToolItems({
       <AnimatePresence>
         {info && (
           <motion.aside
-            className="h-auto absolute float-right bg-neutral-700 rounded-lg shadow-lg left-20 top-0 z-10 px-2 py-2"
+            className="h-auto absolute float-right bg-zinc-900 rounded-lg shadow-2xl left-20 top-0 z-10 px-2 py-2"
             initial={{ opacity: 0, width: 0 }}
             animate={{ opacity: 1, width: "auto" }}
             exit={{ opacity: 0, width: 0 }}
