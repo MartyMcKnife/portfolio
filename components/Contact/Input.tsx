@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 
 interface Props {
-  required: boolean;
+  required?: boolean;
   placeholder: string;
   type: string;
   value: string | number;

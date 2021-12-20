@@ -70,7 +70,7 @@ export default function ContactForm(): ReactElement {
         borderTop: 0,
       }}
       exit={{ opacity: 0, height: 0 }}
-      className="w-full rounded-b-lg py-4 px-12 flex flex-col gap-y-2"
+      className="w-full rounded-b-lg py-4 px-4 sm:px-12 flex flex-col gap-y-2"
       onSubmit={handleSubmit}
     >
       <Label text="Name" htmlFor="name" />
@@ -82,18 +82,18 @@ export default function ContactForm(): ReactElement {
         id="name"
         required
       />
-      <Label text="Email" htmlFor="email" />
+      <Label text="Email" htmlFor="email" className="mt-4" />
       <Input
         placeholder="john@example.com"
-        type="text"
+        type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
         id="email"
       />
-      <Label htmlFor="message" text="Message" />
+      <Label htmlFor="message" text="Message" className="mt-4" />
       <textarea
-        className="bg-inherit border-b-2 max-w-lg px-4 py-2 text-white text-xl rounded-lg"
+        className="bg-inherit border-b-2 max-w-lg px-4 py-2 text-white text-xl rounded-lg h-12"
         placeholder="Hi 👋"
         value={message}
         onChange={(e) => setMessage(e.target.value)}

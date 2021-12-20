@@ -3,7 +3,10 @@ import Title from "./Title";
 
 export default function AboutMe(): ReactElement {
   return (
-    <section id="about" className="bg-sky-800 text-white px-16 md:px-24 py-12">
+    <section
+      id="about"
+      className="bg-sky-800 text-white px-10 sm:px-16 md:px-24 py-12"
+    >
       <Title>About Me</Title>
       <p className="font-light text-lg sm:text-xl mt-6">
         I love to solve problems. I love trying to work out how best to do
