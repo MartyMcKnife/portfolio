@@ -38,10 +38,15 @@ export default function QuoteForm(): ReactElement {
     try {
       await emailjs.send(
         process.env.NEXT_PUBLIC_SERVICE as string,
-        process.env.NEXT_PUBLIC_CONTACT as string,
+        process.env.NEXT_PUBLIC_QUOTE as string,
         {
           ...background,
           ...details,
+          deadline: details.deadline.toLocaleDateString(undefined, {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          }),
           source: "Portfolio",
         }
       );
@@ -150,11 +155,11 @@ export default function QuoteForm(): ReactElement {
           Details
         </h1>
         <Label text="Description" htmlFor="description" />
-        <Input
+        <textarea
           required
           placeholder="Describe your project in a few words"
-          type="text"
           value={details.description}
+          className="bg-inherit border-b-2 max-w-lg text-xl px-4 py-2 text-white rounded-lg h-12"
           onChange={(e) =>
             setDetails({ ...details, description: e.target.value })
           }
@@ -176,7 +181,7 @@ export default function QuoteForm(): ReactElement {
           className="mt-4"
         />
         <Input
-          placeholder="https://www.example.com"
+          placeholder="https://www.figma.com/"
           type="text"
           value={details.design}
           onChange={(e) => setDetails({ ...details, design: e.target.value })}
@@ -187,9 +192,9 @@ export default function QuoteForm(): ReactElement {
           htmlFor="inspiration"
           className="mt-4"
         />
-        <Input
+        <textarea
           placeholder="Like Instagram, but with the background blue"
-          type="text"
+          className="bg-inherit border-b-2 max-w-lg text-xl px-4 py-2 text-white rounded-lg h-12"
           value={details.inspiration}
           onChange={(e) =>
             setDetails({ ...details, inspiration: e.target.value })
