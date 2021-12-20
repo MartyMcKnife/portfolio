@@ -4,6 +4,9 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loader from "./Loader";
+import Label from "./Label";
+import Input from "./Input";
+import SubmitButton from "./SubmitButton";
 
 const item = {
   hidden: { opacity: 0 },
@@ -67,28 +70,28 @@ export default function ContactForm(): ReactElement {
         borderTop: 0,
       }}
       exit={{ opacity: 0, height: 0 }}
-      className="w-full rounded-b-lg py-4 px-4 flex flex-col gap-y-2"
+      className="w-full rounded-b-lg py-4 px-12 flex flex-col gap-y-2"
       onSubmit={handleSubmit}
     >
-      <label className="font-semibold text-2xl">Name</label>
-      <input
+      <Label text="Name" htmlFor="name" />
+      <Input
         placeholder="John Smith"
         type="text"
-        className="bg-inherit border-b-2 max-w-lg text-xl px-4 py-2 text-white rounded-lg"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        id="name"
         required
-      ></input>
-      <label className="font-semibold text-2xl pt-4">Email</label>
-      <input
+      />
+      <Label text="Email" htmlFor="email" />
+      <Input
         placeholder="john@example.com"
         type="text"
-        className="bg-inherit border-b-2 max-w-lg px-4 py-2 text-white text-xl rounded-lg"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-      ></input>
-      <label className="font-semibold text-2xl pt-4">Message</label>
+        id="email"
+      />
+      <Label htmlFor="message" text="Message" />
       <textarea
         className="bg-inherit border-b-2 max-w-lg px-4 py-2 text-white text-xl rounded-lg"
         placeholder="Hi 👋"
@@ -96,20 +99,7 @@ export default function ContactForm(): ReactElement {
         onChange={(e) => setMessage(e.target.value)}
         required
       ></textarea>
-      <button
-        type="submit"
-        className={`mx-auto mt-4 font-bold bg-white rounded-lg text-black px-3 py-2 disabled:cursor-not-allowed disabled:opacity-50 flex items-center`}
-        disabled={loading}
-      >
-        {loading ? (
-          <>
-            <Loader />
-            Loading...
-          </>
-        ) : (
-          "Send!"
-        )}
-      </button>
+      <SubmitButton loading={loading} />
       <ToastContainer
         position="bottom-right"
         autoClose={5000}
