@@ -4,6 +4,7 @@ import AboutMe from "../components/AboutMe";
 import Tools from "../components/Tools/Tools";
 import Projects from "../components/Projects/Projects";
 import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer";
 
 export default function Index(): ReactElement {
   const [content, setContent] = useState(false);
@@ -16,6 +17,7 @@ export default function Index(): ReactElement {
           <Tools />
           <Projects />
           <Contact />
+          <Footer />
         </>
       )}
     </div>
