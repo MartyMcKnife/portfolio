@@ -45,7 +45,9 @@ export default function ToolItems({
             </h2>
             <h2 className="text-left font-regular whitespace-nowrap">
               {" "}
-              Year(s) learning: <span> {timeUsing} </span>
+              Year(s) learning:{" "}
+              {/* Add 1, so it counts this year as 1 year learning */}
+              <span> {new Date().getFullYear() - timeUsing + 1} </span>
             </h2>
           </motion.aside>
         )}
