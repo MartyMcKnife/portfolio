@@ -56,7 +56,7 @@ export default function Project({
           )}
         </motion.button>
         <motion.button
-          className="bg-white text-black px-3 py-2 text-lg rounded-xl font-bold"
+          className="bg-white text-neutral-800 px-3 py-2 text-lg rounded-xl font-bold"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

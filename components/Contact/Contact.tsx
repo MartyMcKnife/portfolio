@@ -18,8 +18,8 @@ export default function Contact(): ReactElement {
         <div className="inline-block mt-4">
           <div className="grid grid-cols-2">
             <button
-              className={`max-w-lg border border-white rounded-l-lg flex flex-col items-center py-4 px-2 sm:px-6 transition-all duration-150 hover:bg-white hover:text-black ${
-                form === "contact" && "bg-white text-black"
+              className={`max-w-lg border border-white rounded-l-lg flex flex-col items-center py-4 px-2 sm:px-6 transition-all duration-150 hover:bg-white hover:text-neutral-800 ${
+                form === "contact" && "bg-white text-neutral-800"
               } ${form && "rounded-b-none"}`}
               onClick={() =>
                 form === "contact" ? close() : setForm("contact")
@@ -33,8 +33,8 @@ export default function Contact(): ReactElement {
               </h2>
             </button>
             <button
-              className={`max-w-lg border border-white rounded-r-lg flex flex-col items-center py-4 px-2 sm:px-6 transition-all duration-150 hover:bg-white hover:text-black ${
-                form === "quote" && "bg-white text-black"
+              className={`max-w-lg border border-white rounded-r-lg flex flex-col items-center py-4 px-2 sm:px-6 transition-all duration-150 hover:bg-white hover:text-neutral-800 ${
+                form === "quote" && "bg-white text-neutral-800"
               } ${form && "rounded-b-none"}`}
               onClick={() => (form === "quote" ? close() : setForm("quote"))}
             >

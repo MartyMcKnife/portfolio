@@ -27,7 +27,7 @@ const projects: ProjectList[] = [
   {
     name: "infinito",
     description:
-      "A fairly simple, image board that allowed user's to submit their own photos. Made with Chakra-UI, and Firebase, it featured user authentication and inapropiate image detection",
+      "A fairly simple, image board that allowed user's to submit their own photos. Made with Chakra-UI, and Firebase, it featured an infinite image board, user authentication and added content, as well as NSFW detection",
     image: ["/projects/infinito/home.png", "/projects/infinito/add.png"],
     link: {
       github: "https://github.com/MartyMcKnife/infinito",
